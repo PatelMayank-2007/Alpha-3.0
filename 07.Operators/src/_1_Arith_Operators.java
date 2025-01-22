@@ -8,6 +8,5 @@ public class _1_Arith_Operators {
         System.out.println(A/B);
         System.out.println(A%B);
 
-
     }
 }
