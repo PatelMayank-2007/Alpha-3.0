@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class _9_Switch_statement {
+public class _09_Switch_statement {
         public static void main(String[] args) {
             Scanner M = new Scanner(System.in);
             System.out.println("enter your age:");

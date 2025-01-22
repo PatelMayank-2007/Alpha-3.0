@@ -1,4 +1,4 @@
-public class _1_ifelse_statement {
+public class _04_Else_if_statement {
     public static void main(String[] args) {
         int age = 22;
         if (age > 18) {
@@ -10,5 +10,6 @@ public class _1_ifelse_statement {
         else {
             System.out.println("you can not drive.");
         }
+
     }
 }

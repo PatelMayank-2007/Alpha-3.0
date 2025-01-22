@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class _3_odd_or_even {
+public class _03_odd_or_even {
     public static void main(String[] args) {
         Scanner M = new Scanner(System.in);
         System.out.print("Enter a number:");

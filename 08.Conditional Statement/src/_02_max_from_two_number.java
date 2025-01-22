@@ -1,4 +1,4 @@
-public class _2_max_from_two_number {
+public class _02_max_from_two_number {
     public static void main(String[] args) {
         int a = 40;
         int b = 60;

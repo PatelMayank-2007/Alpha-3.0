@@ -1,4 +1,4 @@
-public class _6_Largest_ofThe_three_number {
+public class _06_Largest_ofThe_three_number {
     public static void main(String[] args) {
         int a = 23;
         int b = 45;

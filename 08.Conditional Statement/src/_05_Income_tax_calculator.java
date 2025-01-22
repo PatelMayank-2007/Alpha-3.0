@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class _5_Income_tax_calculator {
+public class _05_Income_tax_calculator {
     public static void main(String[] args) {
         Scanner M = new Scanner(System.in);
         System.out.println("Enter your income:");

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class _8_Pass_OR_Fail {
+public class _08_Pass_OR_Fail {
     public static void main(String[] args) {
         Scanner M = new Scanner(System.in);
         System.out.print("Enter your marks:");
