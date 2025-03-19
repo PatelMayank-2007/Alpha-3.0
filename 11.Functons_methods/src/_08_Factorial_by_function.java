@@ -16,6 +16,6 @@ public class _08_Factorial_by_function {
 
         double f = facto(x);
 
-        System.out.println("FActorial of a given number is :" + f );
+        System.out.println("Factorial of a given number is :" + f );
     }
 }

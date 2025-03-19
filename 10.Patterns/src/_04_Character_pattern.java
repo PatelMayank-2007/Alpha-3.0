@@ -1,4 +1,6 @@
-public class _04_Character_pattern {
+
+import java.util.Scanner;
+public class _04_Character_pattern{
     public static void main(String[] args) {
         char ch = 'A';
         int n = 7;
