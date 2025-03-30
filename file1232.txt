@@ -1,0 +1,8 @@
+
+Employee ID:1232
+Employee Name     :mayank patel
+Father's Name     :jatinbhai
+Employee Contact  :9327407707
+Email Information :patelmayank232007@gmail.com
+Employee position :e
+Employee Salary   :20000
