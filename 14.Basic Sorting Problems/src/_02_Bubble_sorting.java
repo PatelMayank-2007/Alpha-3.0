@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class _02_Bubble_sorting {
     public static int Bubble(int num[]) {
-        int n = num.length;
+        int n = num.length;//in example n = 5.
 
-        for (int turns = 0; turns <= n - 2; turns++) {
-            for (int j = 0; j<=n-2-turns;j++){
+        for (int turns = 0; turns <= n - 1; turns++) {
+            for (int j = 0; j<=n-1-turns;j++){
                 if(num[j]>num[j+1]){
                     int temp = num[j];
                     num[j] = num[j + 1];
