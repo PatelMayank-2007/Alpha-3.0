@@ -18,6 +18,7 @@ public class variables {
 #include <string>
 #include <iomanip>
 #include <stdexcept>
+#include <cstdlib>
 using namespace std;
 
 // ----- MainMenu -----
@@ -67,7 +68,8 @@ class UserDetails {
         cout << " -----------------------------------" << endl;
         cout << setw(23) << "Cab In Minutes" << endl;
         cout << "Enter your Name: ";
-        cin >> Name;
+        cin >> ws;
+        getline(cin,Name);
         cout << "Enter your Phone Number: ";
         cin >> PhoneNumber;
         cout << "Enter number of passengers: ";
@@ -93,9 +95,9 @@ class distCalcu {
         cout << "|  | |_| |  -  | |__( (_| | (_) )  |" << endl;
         cout << "|   \\____|\\___/ \\____\\__,_|____/   |" << endl;
         cout << " -----------------------------------" << endl;
-        cout << "Enter starting city: ";
+        cout << "Enter your pickup location: ";
         cin >> sCity;
-        cout << "Enter destination city: ";
+        cout << "Enter your drop location: ";
         cin >> dCity;
         cout << "Enter approximate distance between " << sCity << " and " << dCity << " (in km): ";
         cin >> approxDist;
@@ -131,7 +133,7 @@ class VehicleSelect {
         cout<<"|-----------------------------------|" <<endl;
         cout <<"|     3.      |   Luxury Bus        |"<<endl;
         cout<<"|-----------------------------------|" <<endl;
-        cout <<"|     4.      |    Mini Bus        |"<<endl;
+        cout <<"|     4.      |    Mini Bus         |"<<endl;
         cout<<"|-----------------------------------|" <<endl;
 
         cout<<endl;
@@ -165,24 +167,24 @@ public:
         FiveSeaterCar() { seatCapacity = 5; type = "Five Seater"; }
         void selectCar() {
         cout<< "|-----------------------------------|" <<endl;
-        cout << "|      ___  __ _  _ __            |" << endl;
-        cout << "|     / __|/ _` || '__|           |" << endl;
-        cout << "|    | (__( (_| || |               |" << endl;
-        cout << "|     \\___|\\__,_||_|            |" << endl;
+        cout << "|      ___  __ _  _ __              |" << endl;
+        cout << "|     / __|/ _` || '__|             |" << endl;
+        cout << "|    | (__( (_| || |                |" << endl;
+        cout << "|     \\___|\\__,_||_|                |" << endl;
         cout<< "|-----------------------------------" <<endl;
         cout<<"|-----------------------------------|" <<endl;
         cout<<"|  Option No.  |       Vehicle      |"<<endl;
         cout<< "|-----------------------------------|" <<endl;
-        cout <<"|     1.      |    Swift        |"<<endl;
+        cout <<"|     1.      |    Swift            |"<<endl;
         cout<<"|-----------------------------------|" <<endl;
-        cout<<"|     2.      |    Tigor         |"<<endl;
+        cout<<"|     2.      |    Tigor            |"<<endl;
         cout<<"|-----------------------------------|" <<endl;
-        cout <<"|     3.      |   Punch          |"<<endl;
+        cout <<"|     3.      |   Punch             |"<<endl;
         cout<<"|-----------------------------------|" <<endl;
-        cout <<"|     4.      |   Curvv          |"<<endl;
+        cout <<"|     4.      |   Curvv             |"<<endl;
         cout<<"|-----------------------------------|" <<endl;
         cout << "     Enter option: ";
-        // cout << "Select Car:\n1. Swift\n2. Tigor\n3. Punch\n4. Curvv\nEnter choice: ";
+
         int choice; cin >> choice;
         switch (choice) {
         case 1:
@@ -221,25 +223,26 @@ public:
         void selectCar() {
 
         cout<< "|-----------------------------------|" <<endl;
-        cout << "|      ___  __ _  _ __            |" << endl;
-        cout << "|     / __|/ _` || '__|           |" << endl;
-        cout << "|    | (__( (_| || |               |" << endl;
-        cout << "|     \\___|\\__,_||_|            |" << endl;
+        cout << "|      ___  __ _  _ __              |" << endl;
+        cout << "|     / __|/ _` || '__|             |" << endl;
+        cout << "|    | (__( (_| || |                |" << endl;
+        cout << "|     \\___|\\__,_||_|                |" << endl;
         cout<< "|-----------------------------------|" <<endl;
         cout<<"|-----------------------------------|" <<endl;
         cout<<"|  Option No.  |       Vehicle      |"<<endl;
         cout<< "|-----------------------------------|" <<endl;
-        cout <<"|     1.      |    Innova Crysta     |"<<endl;
+        cout <<"|     1.      |    Innova Crysta    |"<<endl;
         cout<<"|-----------------------------------|" <<endl;
-        cout<<"|     2.      |    Ertiga        |"<<endl;
+        cout<<"|     2.      |    Ertiga           |"<<endl;
         cout<<"|-----------------------------------|" <<endl;
-        cout <<"|     3.      |   Marazzo        |"<<endl;
+        cout <<"|     3.      |   Marazzo           |"<<endl;
         cout<<"|-----------------------------------|" <<endl;
-        cout <<"|     4.      |    Safari        |"<<endl;
+        cout <<"|     4.      |    Safari           |"<<endl;
         cout<<"|-----------------------------------|" <<endl;
         cout << "     Enter option: ";
-        // cout << "Select Car:\n1. Innova Crysta\n2. Ertiga\n3. Marazzo\n4. Safari\nEnter choice: ";
-        int choice; cin >> choice;
+
+        int choice;
+         cin >> choice;
         switch (choice) {
         case 1:
         carName = "Innova Crysta";
@@ -277,21 +280,21 @@ public:
         LuxuryBus() { seatCapacity = 40; type = "Luxury Bus"; }
         void selectBus() {
         cout<<"|-----------------------------------|" <<endl;
-        cout<<"|       ___  _ _  ___              |"<<endl;
-        cout<<"|      | _ || | |/ __|             |"<<endl;
-        cout<<"|      | _ \\| | |\\__ \\          |"<<endl;
-        cout<<"|      |___/ \\__/|___/            |"<<endl;
+        cout<<"|       ___  _ _  ___               |"<<endl;
+        cout<<"|      | _ || | |/ __|              |"<<endl;
+        cout<<"|      | _ \\| | |\\__ \\              |"<<endl;
+        cout<<"|      |___/ \\__/|___/              |"<<endl;
         cout<<"|-----------------------------------|" <<endl;
         cout<<"|-----------------------------------|" <<endl;
         cout<<"|  Option No.  |       Vehicle      |"<<endl;
         cout<< "|-----------------------------------|" <<endl;
-        cout <<"|     1.      |   Volvo B11R     |"<<endl;
+        cout <<"|     1.      |   Volvo B11R        |"<<endl;
         cout<<"|-----------------------------------|" <<endl;
-        cout<<"|     2.      |    Scania Metrolink     |"<<endl;
+        cout<<"|     2.      |    Scania Metrolink |"<<endl;
         cout<<"|-----------------------------------|" <<endl;
-        cout <<"|     3.      |   Mercedes-Benz MultiAxle        |"<<endl;
+        cout <<"|     3.      |   Mercedes          |"<<endl;
         cout<<"|-----------------------------------|" <<endl;
-        cout <<"|     4.      |    Tata Starbus Ultra        |"<<endl;
+        cout <<"|     4.      |    Tata Starbus     |"<<endl;
         cout<<"|-----------------------------------|" <<endl;
         cout << "     Enter option: ";
         // cout << "Select Bus:\n1. Volvo B11R\n2. Scania Metrolink\n3. Mercedes-Benz MultiAxle\n4. Tata Starbus Ultra\nEnter choice: ";
@@ -308,8 +311,8 @@ public:
         ratePerKm = 36;
         break;
         case 3:
-        busName = "Mercedes-Benz MultiAxle";
-        brand = "Mercedes-Benz";
+        busName = "Mercedes";
+        brand = "Mercedes";
         ratePerKm = 38;
         break;
         case 4:
@@ -333,21 +336,21 @@ public:
         MiniBus() { seatCapacity = 12; type = "Mini Bus"; }
         void selectBus() {
         cout<<"|-----------------------------------|" <<endl;
-        cout<<"|       ___  _ _  ___              |"<<endl;
-        cout<<"|      | _ || | |/ __|             |"<<endl;
-        cout<<"|      | _ \\| | |\\__ \\          |"<<endl;
-        cout<<"|      |___/ \\__/|___/            |"<<endl;
+        cout<<"|       ___  _ _  ___               |"<<endl;
+        cout<<"|      | _ || | |/ __|              |"<<endl;
+        cout<<"|      | _ \\| | |\\__ \\              |"<<endl;
+        cout<<"|      |___/ \\__/|___/              |"<<endl;
         cout<<"|-----------------------------------|" <<endl;
         cout<<"|-----------------------------------|" <<endl;
         cout<<"|  Option No.  |       Vehicle      |"<<endl;
         cout<< "|-----------------------------------|" <<endl;
-        cout <<"|     1.      |   Traveller     |"<<endl;
+        cout <<"|     1.      |   Traveller         |"<<endl;
         cout<<"|-----------------------------------|" <<endl;
-        cout<<"|     2.      |    Winger     |"<<endl;
+        cout<<"|     2.      |    Winger           |"<<endl;
         cout<<"|-----------------------------------|" <<endl;
-        cout <<"|     3.      |   Supro Van       |"<<endl;
+        cout <<"|     3.      |   Supro Van         |"<<endl;
         cout<<"|-----------------------------------|" <<endl;
-        cout <<"|     4.      |    MiTR       |"<<endl;
+        cout <<"|     4.      |    MiTR             |"<<endl;
         cout<<"|-----------------------------------|" <<endl;
         cout << "     Enter option: ";
         // cout << "Select Bus:\n1. Traveller\n2. Winger\n3. Supro Van\n4. MiTR\nEnter choice: ";
@@ -413,32 +416,31 @@ class Bill {
         bookingID = ++bookingCounter;
         totalFare = distance * ratePerKm;
     }
-
-    void generateBill() {
-        cout<<"|-----------------------------------|" <<endl;
-        cout<<"|     ___ _ _ _                    |"<<endl;
-        cout<<"|    | _ |_) | |                  |"<<endl;
-        cout<<"|    | _ \\ | | |                  |"<<endl;
-        cout<<"|    |___/_|_|_|                    |"<<endl;
-        cout<<"|-----------------------------------|" <<endl;
-        cout << "\n----- Booking Bill -----\n";
-        cout << "Booking ID: " << bookingID << endl;
-        cout << "Name: " << userName << endl;
-        cout << "Vehicle Type: " << vehicleType << endl;
-        cout << "Distance: " << distance << " km" << endl;
-        cout << "Rate per Km: ₹" << ratePerKm << endl;
-        cout << "Total Fare: ₹" << totalFare << endl;
-        cout << "Booking Confirmed!\n";
-        cout << "------------------------\n";
-    }
-
+void generateBill() {
+    system("clear");
+    cout << " -----------------------------------" << endl;
+    cout << "|         ___ _ _ _               |" << endl;
+    cout << "|        | _ |_) | |              |" << endl;
+    cout << "|        | _ \\ | | |              |" << endl;
+    cout << "|        |___/_|_|_|              |" << endl;
+    cout << " -----------------------------------" << endl;
+    cout << "\n----- Booking Bill -----" << endl;
+    cout << " --------------------------" << endl;
+    cout << "| Booking ID: " << setw(13) << left << bookingID << "  |" << endl;
+    cout << "| Name: " << setw(20) << left << userName << " |" << endl;
+    cout << "| Vehicle Type: " << setw(12) << left << vehicleType << " |" << endl;
+    cout << "| Distance: " << left << distance << " km" << setw(13) << right << " |" << endl;
+    cout << "| Rate per Km: " << setw(10) << left << ratePerKm << "    |" << endl;
+    cout << "| Total Fare: " << setw(11) << left << totalFare << "    |" << endl;
+    cout << " --------------------------" << endl;
+    cout << "| Booking Confirmed!      |" << endl;
+    cout << " --------------------------" << endl;
+}
     int getBookingID() const {
         return bookingID;
     }
 };
-
 int Bill::bookingCounter = 1234;
-
 // ----- Logo -----
         void gocab() {
         cout << " -----------------------------------" << endl;
@@ -450,7 +452,6 @@ int Bill::bookingCounter = 1234;
         cout << " -----------------------------------" << endl;
         cout << setw(23) << "Cab In Minutes" << endl;
         }
-
 // ----- Main -----
         int main() {
         MainMenu menu;
@@ -458,20 +459,20 @@ int Bill::bookingCounter = 1234;
         distCalcu distance;
         VehicleSelect vehicleSelect;
         CancelCab cancelCab;
-
         bool isBooked = false;
         int currentBookingID = 0;
-
         char option;
         do {
         menu.showMenu();
         cin >> option;
-
         if (option == '1') {
+        system("clear");
         user.inputUser();
+        system("clear");
         distance.inputdistance();
+        system("clear");
         distance.displayDist();
-
+        system("clear");
         vehicleSelect.showVehicle();
         try {
         int vChoice = vehicleSelect.selectVehicle();
@@ -503,14 +504,12 @@ int Bill::bookingCounter = 1234;
         break;
         }
         }
-
         if (vPtr != nullptr) {
         Bill bill(user.getName(), vPtr->getType(), distance.getDistance(), vPtr->getRate());
         bill.generateBill();
         currentBookingID = bill.getBookingID();
         isBooked = true;
         }
-
         } catch (const out_of_range &e) {
         cout << e.what() << endl;
         }
@@ -520,7 +519,9 @@ int Bill::bookingCounter = 1234;
         cin >> bookingID;
         cancelCab.cancelBooking(bookingID, currentBookingID, isBooked);
         } else if (option == '3') {
-        cout << "GoCab - Best Cab Service Provider in Your City!" << endl;
+        cout << "Welcome to GoCab – your trusted partner for fast, reliable, and affordable cab services!"<<endl<<"At GoCab, we prioritize safety, comfort, and convenience to make your travel seamless. Whether you need a quick ride across town or a spacious vehicle for group travel, our diverse fleet (from 5-seaters to luxury buses) ensures the perfect fit for every journey."<<endl ;
+
+//At GoCab, we prioritize safety, comfort, and convenience to make your travel seamless. Whether you need a quick ride across town or a spacious vehicle for group travel, our diverse fleet (from 5-seaters to luxury buses) ensures the perfect fit for every journey." << endl;
         }
 
         } while (option != 'q' && option != 'Q');
@@ -528,7 +529,6 @@ int Bill::bookingCounter = 1234;
         cout << "Thank you for using GoCab!" << endl;
         return 0;
         }
-
  */
 
 /*#include <iostream>
