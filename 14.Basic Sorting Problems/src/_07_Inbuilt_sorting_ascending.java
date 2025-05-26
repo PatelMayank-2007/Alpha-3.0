@@ -1,7 +1,7 @@
 import java.util.*;
 
 
-public class _07_Inbuilt_sorting {
+public class _07_Inbuilt_sorting_ascending {
     public static void main(String[] args) {
         int arry[] = {34,65,12,89,23};
         //Arrays.sort(arry);   This is for whole array sorting
