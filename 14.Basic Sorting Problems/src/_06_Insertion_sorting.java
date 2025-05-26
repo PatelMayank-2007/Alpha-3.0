@@ -1,18 +1,17 @@
 import java.util.Scanner;
 
 public class _06_Insertion_sorting {
-    public void InsertionSort(int[] A) {
-        int i, j, v;
-
-        for (i = 1; i <= A.length - 1; i++) {
-            v = A[i];
-            j = i;
-
-            while (A[j-1] > v && j >= 1) {
-                A[j] = A[j - 1];
-                j--;
+    public void InsertionSort(int[] arry) {
+        for (int i = 1 ; i<arry.length;i++){
+            int current_element = arry[i];
+            int previous_element = i-1;
+            //finding out the correct position to insert
+            while(previous_element >= 0&& arry[previous_element] > current_element){
+                arry[previous_element+1] = arry[previous_element];
+                previous_element--;
             }
-            A[j] = v;
+            //insetion
+            arry[previous_element +1] = current_element;
         }
     }
     public static void main(String[] args) {
