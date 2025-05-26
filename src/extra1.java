@@ -1,25 +1,20 @@
-public class extra1 {
-    public static void main(String[] args) {
-//        int n = 10899;
-//        int rev = 0;
-//        while (n > 0) {
-//            int lastDigit = n % 10;
-//            rev = (rev * 10) + lastDigit;
-//            n = n / 10;
-//
-//        }
-//        System.out.println(rev);
-        int arry[]={2,43,65,23,54,1};
-        int n = arry.length;
+import java.math.BigInteger;
 
-        int smallest =Integer.MAX_VALUE;
-        for(int i =0;i<=n-1;i++){
-            if(arry[i]<smallest){
-                smallest=arry[i];
-            }
+public class extra1 {
+
+    public static BigInteger combination(int n, int k) {
+        if (k < 0 || k > n) return BigInteger.ZERO;
+        k = Math.min(k, n - k);
+        BigInteger result = BigInteger.ONE;
+        for (int i = 1; i <= k; i++) {
+            result = result.multiply(BigInteger.valueOf(n - k + i))
+                    .divide(BigInteger.valueOf(i));
         }
-        System.out.println(smallest);
+        return result;
+    }
+
+    public static void main(String[] args) {
+        int n = 23, k = 12;
+        System.out.println("C(" + n + ", " + k + ") = " + combination(n, k));
     }
 }
-
-
