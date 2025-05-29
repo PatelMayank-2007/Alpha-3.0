@@ -5,8 +5,7 @@ public class _07_Inbuilt_sorting_descending {
         Arrays.sort(arry,0,5,Collections.reverseOrder());
         for(int i = 1 ;i<=arry.length ;i++){
             System.out.print(arry[i-1] + " ");
-            System.out.println("mayank ");
-            System.out.println("mayank ");
+
         }
     }
 }
