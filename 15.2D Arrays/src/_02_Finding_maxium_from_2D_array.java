@@ -4,14 +4,18 @@ public class _02_Finding_maxium_from_2D_array {
 
     public static int maximum(int mtx[][]){
         int max=-99999;
+        int MAXi=0;
+        int MAXj=0;
         for(int i=0;i<mtx.length;i++){
             for(int j=0;j<mtx[0].length;j++){
                 if(mtx[i][j]>=max){
                     max=mtx[i][j];
+                    MAXi=i;
+                    MAXj=j;
                 }
             }
         }
-        System.out.println("the maximum value is "+max);
+        System.out.println("the maximum value is "+max+" at index( "+MAXi+","+MAXj+" )");
         return 0;
 
     }
