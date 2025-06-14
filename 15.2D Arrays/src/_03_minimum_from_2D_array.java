@@ -3,14 +3,18 @@ import java.util.Scanner;
 public class _03_minimum_from_2D_array {
         public static int minimum_2D(int mtx[][]){
             int min=99999;
+            int MINi=0;
+            int Minj=0;
             for(int i=0;i<mtx.length;i++){
                 for(int j=0;j<mtx[0].length;j++){
                     if(mtx[i][j]<=min){
                         min=mtx[i][j];
+                        MINi=i;
+                        Minj=j;
                     }
                 }
             }
-            System.out.println("the minimum value is "+min);
+            System.out.println("the minimum value is "+ min+"at index( "+MINi+","+Minj+" )");
             return 0;
 
         }
