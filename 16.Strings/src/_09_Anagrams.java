@@ -1,5 +1,5 @@
 import java.util.*;
-public class veg {
+public class _09_Anagrams {
 
         public static void main(String[] args) {
             String str1 = "earth";
