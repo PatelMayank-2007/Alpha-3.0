@@ -11,6 +11,7 @@ public class _01_CharAt_method {
         String firstname = "Janvi";
         String lastname = "Patel";
         String fullname = firstname + " " + lastname;
+        System.out.println(fullname);
 
         printStr(fullname);
 
