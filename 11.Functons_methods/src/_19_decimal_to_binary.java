@@ -21,6 +21,6 @@ public class _19_decimal_to_binary {
         System.out.println("Enter the value of decimal number:");
         int x = M.nextInt();
         int bin = deci_to_bin(x);
-        System.out.println("your decimal number " + x + " to decimal is " + bin);
+        System.out.println("your decimal number " + x + " to binary is " + bin);
     }
 }
