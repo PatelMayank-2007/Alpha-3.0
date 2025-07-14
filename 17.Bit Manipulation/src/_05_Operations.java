@@ -45,6 +45,6 @@ public class _05_Operations {
         System.out.println(clearI(10, 1));
         System.out.println(updateI(10,2,1));
         System.out.println(clearLastIBits(15,2));
-        System.out.println(clearBitsInRange(10,2,4));
+        System.out.println(clearBitsInRange(15,2,4));
     }
 }
