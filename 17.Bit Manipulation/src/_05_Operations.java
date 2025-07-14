@@ -19,7 +19,7 @@ public class _05_Operations {
         return n&bitmask;
     }
     public static void main(String[] args) {
-        System.out.println(getI(8,0));
+        System.out.println(getI(5,0));
         System.out.println(setI(10,2));
         System.out.println(clearI(10,1));
     }
