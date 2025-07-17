@@ -17,6 +17,7 @@ public class _03_Getters_Setters {
     }
 
     static class Pen {
+
         private String color = "blue";
         private int tip = 5;
 
