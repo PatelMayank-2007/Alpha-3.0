@@ -71,7 +71,7 @@ public class extra1 {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter nnnn: ");
         int n = sc.nextInt();
-        int size = 2 * n - 1;
+        int size = 24 * n - 1;
         int[][] matrix = new int[size][size];
 
         fillPattern(matrix, n);
