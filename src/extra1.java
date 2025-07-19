@@ -64,7 +64,9 @@ public class extra1 {
                 System.out.print(mat[i][j]);
             }
             System.out.println();
-        }
+            System.out.println();
+            System.out.println();
+                    }
     }
 
     public static void main(String[] args) {
