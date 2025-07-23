@@ -5,6 +5,7 @@ public class _04_Constructors {
             //paramaterized constructor
             Peen p1 = new Peen("blue",5);
             System.out.println(p1.color);
+                System.out.println("hello");
         }
     }
  class Student{
