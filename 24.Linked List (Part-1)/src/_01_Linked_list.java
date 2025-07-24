@@ -12,10 +12,12 @@ public class _01_Linked_list {
     }
     public static Node head;
     public static Node tail;
+    public static int size;
 
     public void addFirst(int data){
         //step-1:create a new node
         Node newNode = new Node(data);
+        size++;
         //base case
         if(head == null){
             head=tail=newNode;
@@ -30,6 +32,7 @@ public class _01_Linked_list {
     public void addlast(int data){
         //step -1:create new node
         Node newNode = new Node(data);
+        size++;
         //base class
         if(head==null){
             head=tail=newNode;
@@ -65,6 +68,7 @@ public class _01_Linked_list {
 
         // Step 1: Create a new node with the provided data.
         Node newNode = new Node(data);
+        size++;
         // Step 2: Create a temporary pointer to traverse the linked list, starting from head.
         Node temp = head;
         // Step 3: Initialize a counter i to track the current position.
@@ -89,7 +93,10 @@ public class _01_Linked_list {
         ll.addlast(3);
         ll.addlast(4);
         ll.print();
+        System.out.println("Size of ll:" + ll.size);
         ll.add(2,9);
         ll.print();
+        System.out.println("Size of ll:" + ll.size);
+
     }
 }
