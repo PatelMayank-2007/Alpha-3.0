@@ -57,6 +57,12 @@ public class _01_Linked_list {
 
 
     public void add(int index, int data) {
+        //if index entered is one than we call addfrist method.
+        if(index== 0){
+            addFirst(data);
+            return;
+        }
+
         // Step 1: Create a new node with the provided data.
         Node newNode = new Node(data);
         // Step 2: Create a temporary pointer to traverse the linked list, starting from head.
