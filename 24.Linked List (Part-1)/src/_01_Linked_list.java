@@ -55,7 +55,7 @@ public class _01_Linked_list {
             //updating temp to next node
             temp = temp.next;
         }
-        System.out.println("null");
+        System.out.println("list is null ");
     }
 
 
