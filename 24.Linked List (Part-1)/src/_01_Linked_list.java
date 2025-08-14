@@ -35,7 +35,7 @@ public class _01_Linked_list {
         size++;
         //base class
         if(head==null){
-            head=tail=newNode;
+            head=tail= newNode;
         }
         //step-2 tail pointing towards newNode
         tail.next = newNode;
@@ -141,8 +141,5 @@ public class _01_Linked_list {
         ll.removeLast();
         ll.print();
         System.out.println("Size of ll:" + ll.size);
-
-
-
     }
 }
