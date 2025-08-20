@@ -73,7 +73,7 @@ public class _01_Linked_list {
         Node temp = head;
         // Step 3: Initialize a counter i to track the current position.
         int i = 0;
-        // Step 4: Move temp to the node just before the desired index (index - 1).
+        // Step 4: Move temp to the node just before the desired index (index - 1).It means at point (index-1) it is previous node.
         while (i < index - 1) {
             temp = temp.next; // move to the next node
             i++;
@@ -130,6 +130,8 @@ public class _01_Linked_list {
         ll.addFirst(1);
         ll.addlast(3);
         ll.addlast(4);
+        ll.addFirst(5);
+        ll.addFirst(23);
         ll.print();
         System.out.println("Size of ll:" + ll.size);
         ll.add(2,9);
