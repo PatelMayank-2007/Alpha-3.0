@@ -137,24 +137,35 @@ public class _01_Linked_list {
         return -1;
     }
 
+    public int  helper(Node head,int key){
+        if(head==null){
+            return -1;
+        }
+        if(head.data==key){
+            return 0;
+        }
+        int idx=helper(head.next,key);
+        if(idx==-1){
+            return -1;
+        }
+        return idx+1;
+    }
+    public int recSearch(int key){
+        return helper(head,key);
+    }
+
     public static void main(String[] args) {
         _01_Linked_list ll = new _01_Linked_list();
         ll.addFirst(2);
         ll.addFirst(1);
         ll.addlast(3);
         ll.addlast(4);
+//        ll.add(2,9);
+//        ll.removeFirst();
+//        ll.removeLast();
         ll.print();
         System.out.println("Size of ll:" + ll.size);
-        ll.add(2,9);
-        ll.print();
-        System.out.println("Size of ll:" + ll.size);
-        ll.removeFirst();
-        ll.print();
-        System.out.println("Size of ll:" + ll.size);
-        ll.removeLast();
-        ll.print();
-        System.out.println("Size of ll:" + ll.size);
-        System.out.println(ll.itrSearch(2));
-        System.out.println(ll.itrSearch(10));
+        System.out.println("the value of key is found at "+ll.itrSearch(2) + " by iterative search");
+        System.out.println("the value of key is found at "+ll.recSearch(3) + " by recursive search");
     }
 }
