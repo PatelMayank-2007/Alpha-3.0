@@ -55,7 +55,7 @@ public class _01_Linked_list {
             //updating temp to next node
             temp = temp.next;
         }
-        System.out.println("list is null ");
+        System.out.println("null");
     }
 
 
@@ -107,9 +107,10 @@ public class _01_Linked_list {
             System.out.println("LL is Empty");
             return Integer.MIN_VALUE;
         }
-        if(size ==1 ){
+        if(size==1 ){
             head = tail = null;
             size=0;
+
         }
         //previous node = size -2;
         Node temp = head;
@@ -122,7 +123,19 @@ public class _01_Linked_list {
         size--;
         return val;
     }
+    public int itrSearch(int key){
+        Node temp = head;
+        int i = 0;
+        while(temp!=null){
+            if(temp.data==key) {
+                return i;
+            }
 
+            temp = temp.next;
+            i++;
+        }
+        return -1;
+    }
 
     public static void main(String[] args) {
         _01_Linked_list ll = new _01_Linked_list();
@@ -130,8 +143,6 @@ public class _01_Linked_list {
         ll.addFirst(1);
         ll.addlast(3);
         ll.addlast(4);
-        ll.addFirst(5);
-        ll.addFirst(23);
         ll.print();
         System.out.println("Size of ll:" + ll.size);
         ll.add(2,9);
@@ -143,5 +154,7 @@ public class _01_Linked_list {
         ll.removeLast();
         ll.print();
         System.out.println("Size of ll:" + ll.size);
+        System.out.println(ll.itrSearch(2));
+        System.out.println(ll.itrSearch(10));
     }
 }
