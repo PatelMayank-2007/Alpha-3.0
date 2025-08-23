@@ -189,12 +189,54 @@ public class _01_Linked_list {
         prev.next=prev.next.next;//this will remove middle desired node.
     }
 
+    public Node findMid(Node head){
+        Node slow = head;
+        Node fast = head;
+        while(fast != null && fast.next ==null){
+            slow = slow.next;//append by +1
+            fast = fast.next.next;// append by +2
+        }
+        return slow;
+    }
+
+    public boolean checkPalindrome(){
+        //edge case
+        if(head == null || head.next != null){
+            return true;
+        }
+        //step-1 - find mid
+        Node  midNode = findMid(head);
+
+        //step2-reverse the second half of the linked list.
+        Node prev = null;
+        Node curr =midNode;
+        Node next ;
+        while (curr != null){
+            next =curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=next;
+        }
+        Node right = prev;
+        Node left = head;
+
+        //step3 - check lest half and right half for the palindrome.
+        while (right != null){
+            if(left.data != right.data){
+                return false;
+            }
+            left = left.next;
+            right = right.next;
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         _01_Linked_list ll = new _01_Linked_list();
         ll.addFirst(2);
         ll.addFirst(1);
-        ll.addlast(3);
-        ll.addlast(4);
+        ll.addlast(2);
+        ll.addlast(1);
         ll.print();
         System.out.println("Size of ll:" + ll.size);
 //        ll.add(2,9);
@@ -203,8 +245,8 @@ public class _01_Linked_list {
 //        System.out.println("the value of key is found at "+ll.itrSearch(2) + " by iterative search");
 //        System.out.println("the value of key is found at "+ll.recSearch(3) + " by recursive search");
 //        ll.itrreverseLL();
-        ll.removeNthFromEnd(3);
-        ll.print();
+//        ll.removeNthFromEnd(3);
+        System.out.println(ll.checkPalindrome());
 
     }
 }
