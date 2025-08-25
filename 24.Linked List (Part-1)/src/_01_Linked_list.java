@@ -246,7 +246,7 @@ public class _01_Linked_list {
 //        System.out.println("the value of key is found at "+ll.recSearch(3) + " by recursive search");
 //        ll.itrreverseLL();
 //        ll.removeNthFromEnd(3);
-        System.out.println(ll.checkPalindrome());
+//        System.out.println(ll.checkPalindrome());
 
     }
 }
