@@ -237,6 +237,8 @@ public class _01_Linked_list {
         ll.addFirst(1);
         ll.addlast(2);
         ll.addlast(1);
+        ll.addlast(3);
+
         ll.print();
         System.out.println("Size of ll:" + ll.size);
 //        ll.add(2,9);
