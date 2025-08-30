@@ -245,6 +245,37 @@ public class _01_Linked_list {
         return false;
     }
 
+    public void removeCycle(){
+        //step-1 detect cycle
+        Node slow = head;
+        Node fast = head;
+        boolean cycle = false;
+
+        while(fast!=null && fast.next!= null){
+            fast = fast.next.next;
+            slow= slow.next;
+
+            if (fast==slow){
+                cycle=true;
+                break;
+            }
+        }
+        if(cycle==false){
+            return;
+        }
+        //step-2 initilize slow as head again;
+        slow=head;
+        //step-3 noe increase slow and fast by one and find meeting point and make previos of the meeting point to null;
+        Node previous = null;
+        while(slow!=fast){
+            previous = fast;
+            slow=slow.next;
+            fast = fast.next;
+        }
+        //make pevious.next null
+        previous.next = null;
+    }
+
     public static void main(String[] args) {
         _01_Linked_list ll = new _01_Linked_list();
         ll.addlast(1);
@@ -259,9 +290,10 @@ public class _01_Linked_list {
 //          [1] → [3] → [4] → [2] → [5]
 //                ↑                   |
 //                └───────────────────┘
-
-
+        ll.removeCycle();
+        //remove the cycle and print if the cycle exist or not
         System.out.println(ll.isCycle());
+
 
     }
 }
