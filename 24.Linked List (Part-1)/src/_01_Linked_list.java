@@ -231,24 +231,37 @@ public class _01_Linked_list {
         return true;
     }
 
+    public boolean isCycle(){
+        Node slow= head;
+        Node fast= head;
+
+        while(fast!=null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+            if(fast == slow ){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
         _01_Linked_list ll = new _01_Linked_list();
-        ll.addFirst(2);
-        ll.addFirst(1);
-        ll.addlast(2);
         ll.addlast(1);
         ll.addlast(3);
+        ll.addlast(4);
+        ll.addlast(2);
+        ll.addlast(5);
 
         ll.print();
         System.out.println("Size of ll:" + ll.size);
-//        ll.add(2,9);
-//        ll.removeFirst();
-//        ll.removeLast();
-//        System.out.println("the value of key is found at "+ll.itrSearch(2) + " by iterative search");
-//        System.out.println("the value of key is found at "+ll.recSearch(3) + " by recursive search");
-//        ll.itrreverseLL();
-//        ll.removeNthFromEnd(3);
-//        System.out.println(ll.checkPalindrome());
+        ll.tail.next = ll.head.next;
+//          [1] → [3] → [4] → [2] → [5]
+//                ↑                   |
+//                └───────────────────┘
+
+
+        System.out.println(ll.isCycle());
 
     }
 }
