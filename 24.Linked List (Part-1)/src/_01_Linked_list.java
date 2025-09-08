@@ -270,13 +270,14 @@ public class _01_Linked_list {
         while(slow!=fast){
             previous = fast;
             slow=slow.next;
-            fast = fast.next;
+            fast=fast.next;
         }
         //make pevious.next null
         previous.next = null;
     }
 
-    public static void main(String[] args) {
+
+    public static void main(String[] args)  {
         _01_Linked_list ll = new _01_Linked_list();
         ll.addlast(1);
         ll.addlast(3);
