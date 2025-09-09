@@ -284,6 +284,7 @@ public class _01_Linked_list {
         ll.addlast(4);
         ll.addlast(2);
         ll.addlast(5);
+        ll.addlast(9);
 
         ll.print();
         System.out.println("Size of ll:" + ll.size);
